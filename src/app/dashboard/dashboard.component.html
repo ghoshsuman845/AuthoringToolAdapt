@@ -1,0 +1,361 @@
+<div class="wrapper">
+        <div class="container">
+            
+            <div class="header">
+                <h3>My Courses</h3>
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Search by
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                </div>
+                <div class="icons">
+                      <a (click)="showList()" > <i class="fa fa-list" aria-hidden="true" ></i></a> 
+                      <a (click)="showGrid()"><i class="fa fa-th-large" aria-hidden="true" ></i></a>  
+                </div>
+               
+            </div>
+            <div class="row"  >
+                    <div *ngFor="let course of courses; let index=index"  class="col col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                       
+                            <div class="card" >
+                                    <div class="card-img-top">
+                                      
+                                      
+                                          <a routerLink='/content/course'><i class="fa fa-cog" aria-hidden="true"></i></a>
+                                          <i class="fa fa-trash-o" style="float: left;" aria-hidden="true" (click)='deleteCourse(course.number)'></i>
+                                     
+                                            
+                                    </div>
+                                       
+                                       
+                                        <div class="card-body">
+                                          <p class="card-text" style="color: #212529;">Development</p>
+                                          <a  routerLink='/page-structure'><h5 class="card-title">Angular</h5></a>
+                                          <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                          
+                                          <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                    </div>
+                    <!-- <div class="col col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                            <div class="card" >
+                                    <div class="card-img-top">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                    </div>
+                                       
+                                       
+                                        <div class="card-body">
+                                          <p class="card-text" style="color: #212529;">Development</p>
+                                          <h5 class="card-title">Angular</h5>
+                                          <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                          
+                                          <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                    </div>
+                    <div class="col">
+                            <div class="card" >
+                                    <div class="card-img-top">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                    </div>
+                                       
+                                       
+                                        <div class="card-body">
+                                          <p class="card-text" style="color: #212529;">Development</p>
+                                          <h5 class="card-title">Angular</h5>
+                                          <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                          
+                                          <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                    </div>
+                    <div class="col">
+                            <div class="card" >
+                                    <div class="card-img-top">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                    </div>
+                                       
+                                       
+                                        <div class="card-body">
+                                          <p class="card-text" style="color: #212529;">Development</p>
+                                          <h5 class="card-title">Angular</h5>
+                                          <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                          
+                                          <div class="progress">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                    </div> -->
+                  </div>
+                  <!-- <div class="row" >
+                        <div class="col">
+                                <div class="card" >
+                                        <div class="card-img-top">
+                                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                                <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                        </div>
+                                           
+                                           
+                                            <div class="card-body">
+                                              <p class="card-text" style="color: #212529;">Development</p>
+                                              <h5 class="card-title">Angular</h5>
+                                              <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                              
+                                              <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                        </div>
+                        <div class="col">
+                                <div class="card" >
+                                        <div class="card-img-top">
+                                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                                <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                        </div>
+                                           
+                                           
+                                            <div class="card-body">
+                                              <p class="card-text" style="color: #212529;">Development</p>
+                                              <h5 class="card-title">Angular</h5>
+                                              <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                              
+                                              <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                        </div>
+                        <div class="col">
+                                <div class="card" >
+                                        <div class="card-img-top">
+                                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                                <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                        </div>
+                                           
+                                           
+                                            <div class="card-body">
+                                              <p class="card-text" style="color: #212529;">Development</p>
+                                              <h5 class="card-title">Angular</h5>
+                                              <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                              
+                                              <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                        </div>
+                        <div class="col">
+                                <div class="card" >
+                                        <div class="card-img-top">
+                                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                                <i class="fa fa-trash-o" style="float: left;" aria-hidden="true"></i>
+                                        </div>
+                                           
+                                           
+                                            <div class="card-body">
+                                              <p class="card-text" style="color: #212529;">Development</p>
+                                              <h5 class="card-title">Angular</h5>
+                                              <p class="card-text" style="margin-top: -9px;">Updated On 10th October 2019</p>
+                                              
+                                              <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+                        </div>
+                      </div> -->
+                <div class="h-list" *ngIf= 'visible'>  
+                  <div class="container tb-heading">
+                      <div class="row">
+                          <div class="col-4" style="text-align-last: center;">Course Name</div>
+                          <div class="col-2">Created On</div>
+                          <div class="col-2">Duration</div>
+                          <div class="col-2">Lesson</div>
+                          <div class="col-2">Progress</div>
+                      </div>    
+                  </div>  
+                      <div class="card mb-3" >
+                            <div class="row no-gutters">
+                              <div class="col-md-2">
+                                <img src="assets/images/2.jpg" class="card-img" alt="...">
+                              </div>
+                              <div class="col-md-10">
+                                <div class="card-body">
+                                  <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                  <p class="card-text">Web Development</p>
+                                  <div class="container">
+                                    <div class="row row-1">
+                                        <div class="col">11th October 2019</div>
+                                        <div class="col">60 minutes</div>
+                                        <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                        <div class="col">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                        </div>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div> 
+                          <div class="card mb-3" >
+                              <div class="row no-gutters">
+                                <div class="col-md-2">
+                                  <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                </div>
+                                <div class="col-md-10">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                    <p class="card-text">Web Development</p>
+                                    <div class="container">
+                                      <div class="row row-1">
+                                          <div class="col">11th October 2019</div>
+                                          <div class="col">60 minutes</div>
+                                          <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                          <div class="col">
+                                              <div class="progress">
+                                                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                          </div>
+  
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> 
+                            <div class="card mb-3" >
+                                <div class="row no-gutters">
+                                  <div class="col-md-2">
+                                    <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                  </div>
+                                  <div class="col-md-10">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                      <p class="card-text">Web Development</p>
+                                      <div class="container">
+                                        <div class="row row-1">
+                                            <div class="col">11th October 2019</div>
+                                            <div class="col">60 minutes</div>
+                                            <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                            <div class="col">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                  </div>
+                                            </div>
+    
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+                              <div class="card mb-3" >
+                                  <div class="row no-gutters">
+                                    <div class="col-md-2">
+                                      <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                    </div>
+                                    <div class="col-md-10">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                        <p class="card-text">Web Development</p>
+                                        <div class="container">
+                                          <div class="row row-1">
+                                              <div class="col">11th October 2019</div>
+                                              <div class="col">60 minutes</div>
+                                              <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                              <div class="col">
+                                                  <div class="progress">
+                                                      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                              </div>
+      
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                                <div class="card mb-3" >
+                                    <div class="row no-gutters">
+                                      <div class="col-md-2">
+                                        <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                      </div>
+                                      <div class="col-md-10">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                          <p class="card-text">Web Development</p>
+                                          <div class="container">
+                                            <div class="row row-1">
+                                                <div class="col">11th October 2019</div>
+                                                <div class="col">60 minutes</div>
+                                                <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                                <div class="col">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                </div>
+        
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div> 
+                                  <div class="card mb-3" >
+                                      <div class="row no-gutters">
+                                        <div class="col-md-2">
+                                          <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-md-10">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Angular <span class="badge badge-secondary">New</span></h5>
+                                            <p class="card-text">Web Development</p>
+                                            <div class="container">
+                                              <div class="row row-1">
+                                                  <div class="col">11th October 2019</div>
+                                                  <div class="col">60 minutes</div>
+                                                  <div class="col" style=" margin-left: -17px;">14 Lesson</div>
+                                                  <div class="col">
+                                                      <div class="progress">
+                                                          <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                  </div>
+          
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+                          
+                    </div> 
+        </div>
+
+</div>

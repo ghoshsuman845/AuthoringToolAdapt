@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="btn-grp">
+        <button type="button" class="btn btn-1" (click)="addPage()">Add Page</button>
+        <button type="button" class="btn btn-2">Add Submenu</button>
+    </div>
+    <ul class="list-group">
+            <li class="list-group-item" *ngFor="let page of pages; let index=index">
+                  
+                        <div class="card" >
+                            <div class="card-body">
+                                    <div class="dropdown">
+                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-cog" aria-hidden="true" title="Click To Edit"></i>
+
+                                            </a>
+                                          
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                              <a class="dropdown-item" routerLink='/content/page'>Edit</a>
+                                              <a class="dropdown-item" href="#">Copy</a>
+                                              
+                                            </div>
+                                          </div>
+                                     
+                               <!--<i class="fa fa-trash-o" aria-hidden="true" style="float: right;margin-top: -35px;" (click)="deletePage(pages.number)"></i>-->
+                               <i class="fa fa-trash-o" aria-hidden="true" style="float: right;margin-top: -35px;margin-right: -11px;" (click)="deletePage(page.number)"></i>
+                            <a routerLink='/editor-pane'>  
+                              <h5 class="card-title">Page title</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">{{page.number}}</h6>
+                            </a>
+                            </div>
+                    </div>
+                  
+
+            </li>
+            
+      </ul>
+        
+</div>

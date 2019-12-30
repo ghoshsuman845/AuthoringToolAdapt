@@ -1,0 +1,42 @@
+.card{
+    width: 98% !important;
+    margin-left: 2% !important;
+    border-radius: 0px;
+    margin: -6% auto;
+    background-color: #373d47;
+    align-items: center;
+}
+.inputText-title{
+text-align: center;
+color: #fff;
+font-family: lato;
+font-size: 50px;
+}
+.inputText-inner{
+color:#fff;
+font-family: lato;
+font-size: 20px;
+padding: 2px 24px;
+}
+h6{
+    font-family: 'lato';
+    color: #fff;
+    font-size: 15px;
+    
+    font-weight: 900;
+    
+}
+.flip-card-back {
+    color: #fff;
+    font-family: lato;
+    font-size: 20px;
+   
+    float: right;
+    padding-right: 39%;
+}
+.contact-form button{
+    background:#fff ;
+    color: #373d47;
+    border-radius: 20px;
+    width: 47%;
+}

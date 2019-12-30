@@ -1,0 +1,193 @@
+<div class="wrapper" *ngIf='isShow'>
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <!-- <h3>Learning Tool </h3> -->
+            <h6>Add Components</h6>
+            <i class="fa fa-times" aria-hidden="true" (click)='hideComponentbar()' ></i>
+        </div>
+  
+      
+  
+        <ul class="list-unstyled CTAs">
+           
+            <div class="accordion" id="accordionExample">
+                <div class="card ">
+                   
+                        <div class="card-header" id="headingTwo">
+                                <div class="row">
+                                <div class="col-md-4">
+                                        <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                </div>
+                            <h2 class="mb-0 col-md-8">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                                Text Box
+                                </button>
+                            </h2>
+                        </div> 
+                         </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col" style="margin-left: -13px;">
+                                        <button type="button" class="btn btn-secondary btn-sm" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Add </button>
+                                    </div>
+                                    <div class="col" style="margin-left: 0px;">
+                                         <button type="button" class="btn btn-secondary btn-sm" (click)="addTextBox('Textbox')"  > <i class="fa fa-arrows-h" aria-hidden="true"></i>Add </button>
+                                    </div>
+                                    <div class="col" style="margin-right: -20px;">
+                                        <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            Add </button>  
+                                    </div>
+                                </div>
+                                   
+                                    
+                                    
+                            </div>
+                        </div>
+                    
+                  </div>
+                  <div class="card ">
+                   
+                        <div class="card-header" id="headingTwo">
+                                <div class="row">
+                                <div class="col-md-4">
+                                        <img src="assets/images/2.jpg" class="card-img" alt="...">
+                                </div>
+                            <h2 class="mb-0 col-md-8">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                               Graphics
+                                </button>
+                            </h2>
+                        </div> 
+                         </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                    <div class="row">
+                                            <div class="col" style="margin-left: -13px;">
+                                                <button type="button" class="btn btn-secondary btn-sm" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Add </button>
+                                            </div>
+                                            <div class="col" style="margin-left: 0px;">
+                                                 <button type="button" class="btn btn-secondary btn-sm" (click)="addGraphics('Graphics')"> <i class="fa fa-arrows-h" aria-hidden="true"></i>Add </button>
+                                            </div>
+                                            <div class="col" style="margin-right: -20px;">
+                                                <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                    Add </button>  
+                                            </div>
+                                    </div>        
+                            </div>
+                        </div>
+                    
+                  </div>
+                  <div class="card ">
+                   
+                    <div class="card-header" id="headingTwo">
+                            <div class="row">
+                            <div class="col-md-4">
+                                    <img src="assets/images/2.jpg" class="card-img" alt="...">
+                            </div>
+                        <h2 class="mb-0 col-md-8">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                           Multiple Choice Questions
+                            </button>
+                        </h2>
+                    </div> 
+                     </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                                <div class="row">
+                                        <div class="col" style="margin-left: -13px;">
+                                            <button type="button" class="btn btn-secondary btn-sm" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Add </button>
+                                        </div>
+                                        <div class="col" style="margin-left: 0px;">
+                                             <button type="button" class="btn btn-secondary btn-sm" (click)="addMultipleChoice('MultipleChoice')"> <i class="fa fa-arrows-h" aria-hidden="true"></i>Add </button>
+                                        </div>
+                                        <div class="col" style="margin-right: -20px;">
+                                            <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                Add </button>  
+                                        </div>
+                                </div>        
+                        </div>
+                    </div>
+                
+              </div>
+              <div class="card ">
+                   
+                <div class="card-header" id="headingTwo">
+                        <div class="row">
+                        <div class="col-md-4">
+                                <img src="assets/images/2.jpg" class="card-img" alt="...">
+                        </div>
+                    <h2 class="mb-0 col-md-8">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseTwo">
+                          Text Input 
+                        </button>
+                    </h2>
+                </div> 
+                 </div>
+                <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                            <div class="row">
+                                    <div class="col" style="margin-left: -13px;">
+                                        <button type="button" class="btn btn-secondary btn-sm" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Add </button>
+                                    </div>
+                                    <div class="col" style="margin-left: 0px;">
+                                         <button type="button" class="btn btn-secondary btn-sm" (click)="addTextInput('TextInput')"> <i class="fa fa-arrows-h" aria-hidden="true"></i>Add </button>
+                                    </div>
+                                    <div class="col" style="margin-right: -20px;">
+                                        <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                            Add </button>  
+                                    </div>
+                            </div>        
+                    </div>
+                </div>
+            
+          </div>
+          <div class="card ">
+                   
+            <div class="card-header" id="headingTwo">
+                    <div class="row">
+                    <div class="col-md-4">
+                            <img src="assets/images/2.jpg" class="card-img" alt="...">
+                    </div>
+                <h2 class="mb-0 col-md-8">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseTwo">
+                   Matching
+                    </button>
+                </h2>
+            </div> 
+             </div>
+            <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                        <div class="row">
+                                <div class="col" style="margin-left: -13px;">
+                                    <button type="button" class="btn btn-secondary btn-sm" ><i class="fa fa-arrow-left" aria-hidden="true"></i>Add </button>
+                                </div>
+                                <div class="col" style="margin-left: 0px;">
+                                     <button type="button" class="btn btn-secondary btn-sm" (click)="addMatching('Matching')"> <i class="fa fa-arrows-h" aria-hidden="true"></i>Add </button>
+                                </div>
+                                <div class="col" style="margin-right: -20px;">
+                                    <button type="button" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                        Add </button>  
+                                </div>
+                        </div>        
+                </div>
+            </div>
+        
+      </div>
+               
+                
+              </div>
+        </ul>
+       
+    </nav>
+   
+    <!-- Page Content Holder -->
+    <main  class="page-content">
+        <!-- <app-breadcrumbs></app-breadcrumbs> -->
+        <router-outlet></router-outlet>
+    </main>
+  
+  
+    
+  </div>

@@ -1,0 +1,8 @@
+<div class="card" *ngFor= "let article of articleContent">
+        <div class="card-body article-header">
+        {{article.title}}
+        </div>
+        <div class="card-body article-body" [innerHTML]="article.body"></div>
+
+</div>
+ 

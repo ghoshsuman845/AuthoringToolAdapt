@@ -1,0 +1,16 @@
+<div class="card" id="text" *ngFor ="let text of textContent" >
+  <div class="card-body text-title">
+    {{text.title}}
+  </div>
+  <div class="card-body text-inner" [innerHTML]="text.body">
+   
+  </div>
+  
+  
+
+</div>
+
+
+
+
+

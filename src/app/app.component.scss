@@ -1,0 +1,195 @@
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700";
+
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background:#fff;
+    color: #000;
+    transition: all 0.3s;
+    border-right: 1px solid #8e939b;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+   
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #ffffff;
+    color: #000;
+}
+.sidebar-header h6{
+    margin-left: 3px;
+}
+
+.sidebar-header .fa{
+    float: right;
+    margin-top: -27px;
+}
+
+
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    
+    text-decoration: none;
+    // background: #373d47;
+}
+
+.list-data li {
+    line-height: 11px;
+
+}
+.list-data, .list-input{
+    margin-top: 27px;
+    margin-left: -23px;
+}
+.list-input li{
+    line-height: 15px;
+    padding: 7px 9px;
+    font-size: 12px;
+
+}
+.list-input li a{
+    margin-left: -9px;
+}
+.list-input li input[type=text]{
+    width: 88%;
+}
+
+
+
+ .list {
+    font-family: Lato;
+    font-size: 11px;
+    color: black;
+    list-style-type: none;
+
+
+}
+.list a{
+    color: black !important;
+}
+.list a:hover{
+    color: #007bff !important;
+}
+
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+li a.addnew {
+    background: #373d47;
+    color: #fff;
+    border-radius: 4px;
+    width: 90%;
+    cursor: pointer;
+    
+    
+}
+.btn-group{
+    position: relative;
+    display: inline-flex;
+    /* vertical-align: middle; */
+    width: 88%;
+    margin-left: -15px;
+    height: 25px;
+    background: white;
+}
+.btn-group .btn{
+    position: relative;
+    flex: 1 1 auto;
+    background: white;
+    color: black;
+    padding: 0px;
+    font-size: 13px;
+    font-family: Lato;
+    cursor: pointer;
+
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu{
+    width: 100%;
+
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content.active {
+    width: 100%;
+}
+
+.page-content {
+    width: calc(100vw - 250px);
+    float: right;
+    height: 100vh;
+    padding: 1% 2%;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

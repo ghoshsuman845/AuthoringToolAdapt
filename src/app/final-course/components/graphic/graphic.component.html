@@ -1,0 +1,16 @@
+
+<div class="card" id="page" *ngFor ="let photo of graphicsContent"  >
+    <div class="card-body graphics-title" >
+     {{photo.title}}
+    </div>
+    <div class="card-body graphics-inner" [innerHTML]="photo.body">
+        
+      </div>
+      <div class="card-body">
+         
+          <img [src]= "[photo.graphics_url]" height="300" /> 
+     </div>
+      <!-- <div class="card-body graphics-title" >
+          {{photo.graphics_url}}
+         </div> -->
+  </div>

@@ -1,0 +1,45 @@
+<div class="card" id="inputText" *ngFor ="let input of inputTextContent" >
+    <div class="card-body inputText-title">
+      {{input.title}}
+    </div>
+    <div class="card-body inputText-inner" [innerHTML]="input.body">
+     
+    </div>
+    <div class="card-body inputText-inner" style="width: 100%;" >
+            <div class="flip-card-front">
+                <h6>Input your answer and select submit.</h6>
+                <form #InputForm="ngForm" (ngSubmit)="SubmitItem(InputForm)" class="InputForm">
+                    <div class="col-lg" >
+                        <div class="contact-form">
+                            
+                            <div class="form-group">
+                            
+                            <div class="col-sm-10">          
+                                <input type="text" class="form-control" id="title" name="answer" ngModel>
+                            </div>
+                            </div>
+                            <div class="form-group">        
+                                <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default" style="margin-right: 40px;" >Submit</button>
+                                <button type="submit" class="btn btn-default" (click)="onSelect()" >Feedback</button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>       
+                </form>
+            </div>
+            <i class="fa fa-window-close" [hidden]="IsHidden" (click)="onClose()" aria-hidden="true"></i>
+            <div class="flip-card-back" [hidden]="IsHidden" [innerHTML]="input._feedback">
+                   
+            </div>    
+    </div>
+    
+    
+  
+  </div>
+  
+  
+  
+  
+  
+  

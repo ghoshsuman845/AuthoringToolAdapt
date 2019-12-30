@@ -1,0 +1,113 @@
+.container{
+    .card-img{
+        border-radius: 0px;
+    }
+    .img-1{
+       width: 110%;
+      
+    }
+    .img-2{
+        width: 166%;
+        margin-left: 30%;
+    }
+    .img-3{
+        height: 202px;
+     margin-top: 8%;
+    }
+    .card{
+        width: 107%;
+        border-radius: 0px;
+        background-color: #212529;
+        margin-left: -3%;
+    .card-title {
+        margin-bottom: .75rem;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: lato;
+        font-weight: 700;
+        font-size: 37px;
+        padding: 21px 5px;
+    }
+    .text-muted{
+        text-align: center;
+        font-family: lato;
+        margin: -39px auto;
+
+    }
+    .card-text{
+        font-family: lato;
+        color: #fff;
+        font-size: 20px;
+        margin: 1px;
+        padding: 12px 6px;
+
+
+    }
+   
+
+    }
+   
+ 
+}
+.cont-2{
+    .card{
+        border-radius: 0px; 
+        margin-bottom: 15px;
+        width: 100%;
+        box-shadow: 5px 5px 5px #dddbdb;
+        background-color: white;
+       
+        margin-top: -24px;
+        margin-left: 16px;
+        .card-body{
+            margin-top: -17px;
+        margin-left: -8px;
+        }
+        .card-title {
+            margin-bottom: 0.75rem;
+            font-family: lato;
+            font-weight: 700;
+            color: #212529;
+            font-size: 37px;
+            padding: 21px 5px;
+        }
+    
+        .card-text{
+        font-family: lato;
+        font-size: 20px;
+        margin: 1px;
+        padding: 12px 6px;
+        color: #B5B5B5;
+        }
+        .btnLink {
+            background: #373d47;
+            color: #fff;
+            border-radius: 20px;
+            width: 24%;
+            height: 33px;
+            padding: 3px;
+            text-align: center;
+            margin: 22px 8px;
+            cursor: pointer;
+        }
+        .progress {
+            display: flex;
+            height: 7px;
+            width: 103%;
+            margin-top: 18px;
+            margin-bottom: -8px;
+            overflow: hidden;
+            font-size: .75rem;
+            background-color: #e9ecef;
+            border-radius: .25rem;
+            .bg-primary {
+                background-color: #6c63ff!important;
+            }
+        }
+    }
+  }
+
+.course-object{
+    margin-top: 2%;
+}

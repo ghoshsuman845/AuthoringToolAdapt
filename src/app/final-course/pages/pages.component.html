@@ -1,0 +1,14 @@
+
+<div class="card" id="page" *ngFor= 'let pages of pageContent'  >
+    <div class="card-body page-title" >
+     {{pages.title}}
+    </div>
+  
+      <div class="card-body page-inner" [innerHTML]="pages.pageBody"> </div>
+      
+  </div>
+ 
+  <app-articles [articleContent]="article" > 
+   
+  </app-articles>
+ 

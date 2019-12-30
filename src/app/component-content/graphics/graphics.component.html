@@ -1,0 +1,81 @@
+<div class="container contact">
+        <div class="header">
+                <h6>General</h6>
+        </div>
+            <form #graphicsCompForm="ngForm" (ngSubmit)="SubmitItem(graphicsCompForm)" class="graphicsCompForm">
+            <div class="col-lg" >
+              
+                    <div class="contact-form">
+                            
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="title">Title</label>
+                          <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="title" name="title" ngModel>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="displayTitle">Display Title</label>
+                          <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="displayTitle" name="displayTitle" ngModel>
+                          </div>
+                        </div>
+                       
+                        
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="body">Body</label>
+                          <div class="col-sm-10">
+                                
+                                <p-editor [style]="{'height':'250px'}" name="body" ngModel></p-editor>
+                               
+                          </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="control-label col-sm-2" for="instruction">Instruction</label>
+                                <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="instruction"  name="instruction" ngModel>
+                                </div>
+                                
+                         </div>
+                        
+                        
+                         <div class="form-group">
+                          <label class="control-label col-sm-2" for="blink">Image Upload</label>
+                        <div class="col-md-10">
+                          
+                                 
+                        <div class="form-group">
+                            <p-fileUpload mode="basic" (uploadHandler)="onUpload($event)" customUpload="true" accept="image/*" maxFileSize="10485760">
+                            </p-fileUpload>                            
+                        </div>
+                            
+                            <div class="image-preview mb-3" name="graphics_url" *ngIf="previewUrl">
+                                <img [src]="previewUrl" height="300" />                 
+                            </div>
+                 
+                            <div class="mb-3" *ngIf="uploadedFilePath">
+                                {{uploadedFilePath}}
+                            </div>
+                             
+                            
+                        </div>
+                    </div>
+                         
+                      
+                    
+                   
+                    
+                    
+                    <div class="form-group">        
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" >Submit</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div>
+               
+        
+    </div>
+    

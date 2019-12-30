@@ -1,0 +1,137 @@
+<div class="wrapper">
+      
+        <ul class="list-group">
+                <li class="list-group-item" style="border: none;">
+                        <div class="card" style="height: 60px;" >
+                                <div class="card-body">
+                                        <div class="dropdown">
+                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true" title="Click To Edit"></i>
+    
+                                                </a>
+                                              
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                  <a class="dropdown-item"routerLink='/content/page'>Edit</a>
+                                                  <a class="dropdown-item" href="#">Copy</a>
+                                                  
+                                                </div>
+                                              </div>
+                                         
+                                      
+                                  <h5 class="card-title">Page title</h5>
+                                  
+                                  
+                                </div>
+                        </div>
+    
+                </li>
+                
+          </ul>
+          <ul class="list-group" id="article" style="width: 94%;" >
+           
+            
+                <li class="list-group-item" *ngFor="let article of articles; let index=index">
+                    <!-- <a routerLink='/content/article'>
+                             <i class="fa fa-cog" aria-hidden="true" title="Edit" ></i>
+                    </a>
+                        <i class="fa fa-trash-o" aria-hidden="true" style="float: right;"  (click)="deleteArticle(articles.number)"></i>
+                        <span class="count-numbers">Article Title</span>
+                        <span class="count-name">{{article.number}}</span>  -->
+                       <div class="card" style="border: none;height: 32px;">
+                                <div class="card-body" style="padding: 6px 23px;">
+                                                <div class="dropdown">
+                                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-cog" aria-hidden="true" title="Click To Edit"></i>
+            
+                                                        </a>
+                                                      
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                          <a class="dropdown-item" routerLink='/content/article'>Edit</a>
+                                                          <a class="dropdown-item" href="#">Copy</a>
+                                                          
+                                                        </div>
+                                                      </div>
+                                                 
+                                                      <i class="fa fa-trash-o" aria-hidden="true" style="float: right;margin-top: -35px;margin-right: -46px;" (click)="deleteArticle(article.number)"></i>
+  
+                                          <h5 class="card-title">Article title</h5>
+                                          
+                                          
+                                        </div>
+                       </div>
+                        <hr>
+                    <ul class="list-group" id="block" >
+                        <li class="list-group-item" style="border: none;"  *ngFor="let block of blocks; let index=index" >
+                            <!-- <a routerLink='/content/block'>
+                                    <i class="fa fa-cog" aria-hidden="true" title="Edit" ></i>
+                           </a>
+                                <i class="fa fa-trash-o" aria-hidden="true" style="float: right;" (click)="deleteBlock(blocks.number)"></i>
+                                <span class="count-numbers">Block Title</span>
+                                <span class="count-name">{{block.number}}</span>  -->
+                                <div class="card" style="border: none;height: 58px;">
+                                <div class="card-body" style="padding: 0px 4px;">
+                                                <div class="dropdown" >
+                                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="fa fa-cog" aria-hidden="true" title="Click To Edit"></i>
+                
+                                                        </a>
+                                                        
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                <a class="dropdown-item"routerLink='/content/block'>Edit</a>
+                                                                <a class="dropdown-item" href="#">Copy</a>
+                                                                
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        <i class="fa fa-trash-o" aria-hidden="true" style="float: right;margin-top: -35px;margin-right: -46px;" (click)="deleteBlock(block.number)"></i>
+        
+                                                <h5 class="card-title">Block title - {{block.number}}</h5>
+                                                <hr style="width: 112%; margin-left: -25px;margin-top: 23px;">
+                                                
+                                        </div>
+                                        
+
+                                </div>
+                                <ul class="list-group" id="component">
+                                        <li class="list-group-item" style=" text-align: center;">
+                                                   
+                                                    <div class="card" style="border: none;height: 62px;" *ngIf="visible">
+                                                                <div class="card-body" style="padding: 0px 4px;">
+                                                                                <div class="dropdown" style="text-align: start; padding: 2px 11px;">
+                                                                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                                <i class="fa fa-cog" aria-hidden="true" title="Click To Edit"></i>
+                                                
+                                                                                        </a>
+                                                                                        
+                                                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                                                <a class="dropdown-item" (click)='gotoComponentPage(Component, $event)'>Edit</a>
+                                                                                                <a class="dropdown-item" href="#">Copy</a>
+                                                                                                
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        
+                                                                                        <i class="fa fa-trash-o" aria-hidden="true" style="float: right;margin-top: -35px;margin-right: -46px;" (click)="deleteComponent()"></i>
+                                        
+                                                                                <h5 class="card-title" style="text-align: start; margin-top: -37px;">{{Component}} </h5>
+                                                                                
+                                                                                
+                                                                        </div>
+                                
+                                                                </div>
+                                                <button type="button" class="btn  btn-c" (click) = 'displayComponentbar()' *ngIf="!visible" [disabled]='this.Component' >Add Component</button>
+    
+                                        </li>
+                                        
+                                </ul>
+    
+                        </li>
+                        <button type="button" class="btn  btn-b" (click)="addBlock()">Add Block</button>  
+                    </ul>
+                  
+                </li>
+                
+            </ul>  
+            <button type="button" class="btn btn-a" (click)="addArticle()" >Add Article</button>
+        <app-component-sidebar  *ngIf = 'isShow' (addComponent)="addComponentHere($event)"></app-component-sidebar>
+            
+    </div>

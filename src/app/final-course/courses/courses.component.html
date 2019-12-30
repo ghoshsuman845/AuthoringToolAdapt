@@ -1,0 +1,59 @@
+<div class="container">
+        <div class="row">
+            <div class="col">
+                    <div class="card" *ngFor='let content of course' >
+                            <div class="card-body">
+                              <h5 class="card-title">{{content.title}}</h5>
+                              <h6 class="card-subtitle mb-2 text-muted">{{content.tags}} </h6>
+                              <p class="card-text"[innerHTML]="content.body"></p>
+                            
+                            </div>
+                    </div>
+
+            </div>
+         
+</div>   
+<div class="cont-2"  >
+        <div class="row"  >
+                <div class="col col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                   
+                    <div class="card " *ngFor= 'let pages of page1'  >
+                        <div class="card-body">
+                            <h5 class="card-title" > {{pages.title}}</h5>
+                            <p class="card-text" [innerHTML]="pages.body" >
+                               
+                            </p>
+                            
+                             <div class="btnLink" (click)='goToPage()' routerLink='/final-course/course-object'>
+                                 <a  style=" color: #fff;">{{pages.btnlinkText}}</a>
+                             </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                                
+                    </div>
+                </div>
+                <div class="col col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                   
+                        <div class="card " *ngFor= 'let pages of page1'  >
+                            <div class="card-body">
+                                <h5 class="card-title" > {{pages.title}}</h5>
+                                <p class="card-text" [innerHTML]="pages.body" >
+                                      
+                                 <div class="btnLink" (click)='goToPage()' >
+                                     <a  style=" color: #fff;">{{pages.btnlinkText}}</a>
+                                 </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                                    
+                        </div>
+                    </div>
+              
+                       
+              </div>
+</div> 
+ <!-- <app-course-object></app-course-object>   -->
+

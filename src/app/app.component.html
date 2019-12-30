@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <!-- <h3>Learning Tool </h3> -->
+          <h6>Quick Access</h6>
+          <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+
+    
+
+      <ul class="list-unstyled CTAs">
+         
+              <li style="margin-top: -18%;">  <a routerLink ='/editor-pane' style="color: black;">
+                  <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  Back To Page Structure
+              </a></li>
+              <li style="margin-top: -8%;">  <a routerLink ='/dashboard' style="color: black;">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                Back To Dashboard
+            </a></li>
+         
+          <li><a  class="addnew" (click)="addCourse()">Add New</a></li>
+          <li><a (click)="sendData()" class="article" routerLink='/final-course/courses' class="addnew">Preview</a></li>
+
+          <!-- <li><a (click)="sendData()" class="article" routerLink='/final-course'>Preview Course</a></li> -->
+      </ul>
+      <ul class="list" >
+          <div class="btn-group">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Choose Type
+                </button>
+              <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Training Programme</a>
+                  <a class="dropdown-item" href="#">Course Creator</a>
+                  <a class="dropdown-item" href="#">Survey</a>
+                  
+                  <a class="dropdown-item" href="#">Questionnaire</a>
+              </div>
+            </div>
+      <div class="list-data">
+        <li > <a  routerLink='/dashboard'>My Courses</a> </li>
+        <li><a href="#">My Training Programme</a> </li>
+        <li><a href="#">My Survey</a></li>
+        <li><a href="#">My Questionnaire</a></li>
+      </div> 
+      <div class="list-input">
+        <li><a href="#">Assigned Courses</a></li>
+        <li>Search by name <br>
+          <input type="text" name="name" id="nameInput"></li>
+        
+        <li>Search by Tag <br>
+          <input type="text" name="tag" id="tagInput"></li>
+        
+      </div>
+      </ul>
+  </nav>
+ 
+  <!-- Page Content Holder -->
+  <main  class="page-content">
+     
+      <app-breadcrumbs style=" background-color: #ffffff;border: none !important;padding: 0.571em 1em;width: 78%;margin-left: 1%;"></app-breadcrumbs>
+      <router-outlet></router-outlet>
+  </main>
+
+
+  
+</div>
